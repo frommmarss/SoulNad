@@ -2,16 +2,21 @@ import './globals.css';
 import { Providers } from './providers';
 
 export const metadata = {
-  title: 'SoulNad | On-Chain Chemistry',
-  description: 'Match and send pulses on Monad Network',
+  title: 'SoulNad | Monad SocialFi',
+  description: 'Discover your on-chain soulmate on Monad',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body>
-        {/* Providers artık tüm sayfaları sarmalıyor */}
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
